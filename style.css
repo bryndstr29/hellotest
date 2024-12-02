@@ -1,0 +1,398 @@
+/* Reset basic styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(45deg, #3d3d3d, #6c757d); /* Gradient background */
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: Normal;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  color: #f7f7f7;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero section styling */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #3d3d3d, #6c757d);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-transform: none;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.3s;
+  margin: 10px;
+}
+
+.btn-primary {
+  background: #3d3d3d;
+  color: #fff;
+  border-color: #3d3d3d;
+}
+
+.btn-primary:hover {
+  background: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #3d3d3d;
+  border-color: #3d3d3d;
+}
+
+/* Services Section */
+.services {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.services h2 {
+  font-size: 2.8rem;
+  color: #3d3d3d;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Grid for services cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card styling */
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+  border-radius: 92px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #e8f4fc; /* Light blue background on hover */
+}
+
+.card i {
+  color: #6c757d;
+  transition: color 0.3s;
+}
+
+.card:hover i {
+  color: #007bff;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: #3d3d3d;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.card:hover h3 {
+  color: #007bff;
+}
+
+.card .description {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.card .hover-info {
+  display: none;
+  color: #333;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.card:hover .hover-info {
+  display: block;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(45deg, #3d3d3d, #6c757d); /* Gradient background */
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .social-media {
+  margin-top: 1rem;
+}
+
+footer .social-media a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+  color: #007bff;
+}
+
+/* Client Testimonial Section */
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #3d3d3d;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h3 {
+  font-size: 1.4rem;
+  color: #3d3d3d;
+}
+
+.testimonial-card span {
+  color: #007bff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Section Styles */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-info h2 {
+  font-size: 2.8rem;
+  color: #3d3d3d;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info li i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.contact-form {
+  flex: 1;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #3d3d3d;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form input[type="submit"] {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Input Focus Styling */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+ .extra-description {
+      display: none;
+      margin-top: 10px;
+      color: #555;
+      font-size: 1rem;
+    }
+    .card.expanded .extra-description {
+      display: block;
+    }
+

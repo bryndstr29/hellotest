@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact Us | Synchronized BPO Inc.</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+       <h1 class="logo">Synchronized BPO Inc.</h1>
+      <nav>
+        <a href="index.html">Home</a> 	
+        <a href="services.html">Services</a>
+        <a href="why-us.html">Why Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Reach out to us through the following channels:</p>
+      <ul>
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:contact@synchronizedbpo.com">contact@synchronizedbpo.com</a></li>
+        <li><i class="fas fa-phone"></i> Phone: <a href="tel:+1234567890">+1-234-567-890</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> Address: 123 Business Lane, Suite 456, Your City, Your State</li>
+      </ul>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <form action="send_message.php" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <input type="submit" value="Send Message">
+    </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Synchronized BPO Inc. | All Rights Reserved</p>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>
